@@ -112,7 +112,7 @@ function getLocalTodos() {
         todoDiv.appendChild(completedButton);
 
         const trashButton = document.createElement("button");
-        trashButton.innerHTML = '<i class="fas fa-check-trash"></li>';
+        trashButton.innerHTML = '<i class="fa-sharp fa-solid fa-trash"></li>';
         trashButton.classList.add("trash-btn");
         todoDiv.appendChild(trashButton);
 
