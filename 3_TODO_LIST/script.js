@@ -4,7 +4,7 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
-todoButton.addEventListener("click", addTodo);
+todoButton.addEventListener("click", addTodoCondition);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 
@@ -33,6 +33,11 @@ function addTodo(event) {
     todoInput.value = "";
 }
 
+function addTodoCondition() => {
+    if(addTodo.length != 0){
+      return addtodo();
+    }
+}
 function deleteCheck(e) {
     const item = e.target;
 
