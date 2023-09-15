@@ -8,9 +8,13 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 
+
 function addTodo(event) {
+
     event.preventDefault();
     const todoDiv = document.createElement("div");
+
+    if( todoInput.value != ""){
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value;
@@ -31,8 +35,11 @@ function addTodo(event) {
 
     todoList.appendChild(todoDiv);
     todoInput.value = "";
+    }
+    else{
+        alert("Please Enter to Task ")
+    }
 }
-
 
 function deleteCheck(e) {
     const item = e.target;
@@ -113,7 +120,7 @@ function getLocalTodos() {
         todoDiv.appendChild(completedButton);
 
         const trashButton = document.createElement("button");
-        trashButton.innerHTML = '<i class="fa-sharp fa-solid fa-trash"></li>';
+        trashButton.innerHTML = '<i class="fas fa-check-trash"></li>';
         trashButton.classList.add("trash-btn");
         todoDiv.appendChild(trashButton);
 
