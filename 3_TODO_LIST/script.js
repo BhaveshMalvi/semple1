@@ -29,7 +29,7 @@ function addTodo(event) {
     todoDiv.appendChild(completedButton);
 
     const trashButton = document.createElement("button");
-    trashButton.innerHTML = '<i class="fa-sharp fa-solid fa-trash"></i>';
+    trashButton.innerHTML = '<i class="fa-solid fa-trash fa-shake" style="color: #ededed;"></i>';
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
@@ -120,7 +120,7 @@ function getLocalTodos() {
         todoDiv.appendChild(completedButton);
 
         const trashButton = document.createElement("button");
-        trashButton.innerHTML = '<i class="fa-sharp fa-solid fa-trash"></li>';
+        trashButton.innerHTML = '<i class="fa-solid fa-trash fa-shake" style="color: #ededed;"></i>';
         trashButton.classList.add("trash-btn");
         todoDiv.appendChild(trashButton);
 
